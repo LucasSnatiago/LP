@@ -19,9 +19,9 @@ jobs:
         uses: dante-ev/latex-action@2021-A
         with:
           # The root LaTeX file to be compiled
-          root_file: C.tex
+          root_file: ${{ github.workspace }}/src/C.tex
           # The working directory for the latex compiler to be invoked
-          working_directory: src/           
+          working_directory: ${{ github.workspace }}/src/           
           
       # Creating a release in the releases page
       - name: Create Release
